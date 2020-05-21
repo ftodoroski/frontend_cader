@@ -1,0 +1,353 @@
+#logo-image {
+    display: block;
+    width: 150px;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.navbar-container {
+    background-color: #fff;
+    /* width: 100%; */
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+}
+
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.unoccupied-list-button{
+    margin-top: 20px;
+}
+
+.logout-button {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.nav-buttons {
+    border: none;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.login-form{
+    /* background: #f3f3f3; */
+    margin-top: 20px;
+    /* margin-right: 290px; */
+    margin-right: 13vw;
+}
+
+#email-input {
+    margin-right: 30px;
+    border: 1px solid #282828;
+    box-shadow: none;
+}
+
+#login-button {
+    width: 56px;
+    height: 25px;
+    background-color: #464646;
+    color: #fff;
+}
+
+#password-input {
+    margin-right: 30px;
+    border: 1px solid #282828;
+    box-shadow: none;
+}
+
+#email-label {
+    margin-right: 7px;
+    font-weight: 700;
+}
+
+#password-label {
+    margin-right: 7px;
+    font-weight: 700;
+}
+
+.property-card-container {
+    /* border: 5px dashed red; */
+    width: 100%;
+    padding-right: 40px;
+
+    width: 660px;
+    padding-right: 40px;
+    margin-bottom: 10px;
+
+    /* Experiment */
+    position: relative
+}
+
+.properties-container {
+    width: 87%;
+    /* border: 5px dashed green; */
+    margin: auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.google-maps-api {
+    border: 1px solid #f3f3f3;
+    /* height: 900px; */
+}
+
+.properties-list-header {
+    margin-bottom: 15px;
+}
+
+.properties-list-header {
+    display: flex;
+    justify-content: right;
+}
+
+ .properties-list-header-title {
+    margin-right: 30px;
+    
+}
+
+.properties-map-container {
+    display: flex;
+    /* justify-content: right; */
+    justify-content: space-between;
+    /* justify-content: flex-end; */
+    /* border: 5px dashed yellowgreen; */
+}
+
+th {
+    text-align: left;
+}
+
+/* Experiment */
+.property-card-address {
+    position: absolute;
+    margin: -175px 0px 0px 235px;
+}
+
+/* Experiment */
+.property-card-info {
+    position: absolute;
+    margin: -95px 0px 0px 235px;
+}
+
+.add-new-tenant-button {
+    position: absolute;
+    margin: -57px 0px 0px 515px;
+    /* cursor: pointer; */
+}
+
+.signup-inputs {
+    display: block;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 44px;
+    border: .1px solid #282828;
+    box-shadow: none;
+
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: Helvetica;
+}
+
+.signup-h1 {
+    margin-bottom: 7px;
+    font-size: 50px;
+}
+.signup-h2 {
+    margin-top: 0px;
+    margin-bottom: 13px;
+}
+ 
+.signup-inputs::placeholder {
+    /* color: #000; */
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: Helvetica;
+}
+
+.login::placeholder {
+    font-size: 12px;
+    padding-left: 4px;
+    font-family: Helvetica;
+}
+
+.signup-button {
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #ff0000;
+    border: 1px solid #282828;
+}
+
+.svg-cursor {
+    width: 35px;
+    margin-right: 30px;
+}
+
+.map-location-info-container {
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signup-container{
+    /* margin-right: 290px; */
+    margin-right: 13vw;
+    margin-top: 60px;
+}
+
+.auth-info-container {
+    /* margin-right: 300px; */
+    margin-right: 13vw;
+    margin-top: 125px;
+}
+
+.auth-info-header {
+    font-size: 30px;
+}
+
+.map-location-info{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bolded-words {
+    font-weight: 700;
+}
+
+.property-card {
+    cursor: pointer;
+}
+
+.property-card-table-header {
+    font-weight: 400;
+}
+
+.property-card-table-data {
+    padding-left: 15px;
+}
+
+.property-detail-info-map-table {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 130px;
+}
+
+.property-detail-address {
+    margin-top: 1.5vw;
+}
+
+.property-detail-street {
+    font-size: 2vw;
+    font-family: Helvetica;
+}
+
+.property-detail-city-state-zip{
+    font-size: 1.9vw;
+    font-family: helvetica;
+    margin-top: 1.5vw;
+}
+
+.property-detail-metrics-container{
+    margin-top: 8vw;
+    margin-bottom: 80px;
+    /* border: 1px dashed red; */
+    position: relative;
+}
+
+.property-detail-apartments-table {
+    margin-top: 40px;
+}
+
+.properties-table {
+    width: 40%;
+    margin: auto;
+}
+
+.metric-header {
+    font-size: 25px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.metrics-info {
+    font-size: 20px;
+}
+
+.purchased-amount-container {
+    position: absolute;
+    margin: -63px 0px 0px 336px;
+}
+
+.mortgage-payable-container {
+    position: absolute;
+    margin: -63px 0px 0px 697px;
+}
+ .price-per-unit-container {
+    position: absolute;
+    margin: -63px 0px 0px 1053px;
+ }
+
+ .revenue-container {
+    position: absolute;
+    margin: -63px 0px 0px 1365px;
+ }
+
+ /*  */
+.number-of-units-container {
+    margin-top: 60px;
+}
+
+ .occupied-units-container {
+    position: absolute;
+    margin: -63px 0px 0px 336px
+ }
+
+ .cap-rate-container {
+    position: absolute;
+    margin: -63px 0px 0px 697px
+ }
+
+ .property-type-container {
+    /* position: absolute;
+    margin: -63px 0px 0px 1053px */
+ }
+
+ .building-size-container {
+    position: absolute;
+    margin: -63px 0px 0px 1365px
+ }
+
+ .year-built-container {
+    margin-top: 60px;
+ }
+
+ .unoccupied-units-table {
+
+    width: 80%;
+    margin: auto;
+
+ }

@@ -17,7 +17,7 @@ class AddTenantPropertyModal extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (prevProps.propertyPressed !== this.props.propertyPressed) {
-            fetch(`http://localhost:3001/api/v1//unoccupied_property_units/${this.props.propertyPressed}`)
+            fetch(`https://cader-api.herokuapp.com/api/v1/unoccupied_property_units/${this.props.propertyPressed}`)
             .then(response => response.json())
             .then(data => {
                 this.setState({propertyUnoccupiedUnits: data})
@@ -39,7 +39,7 @@ class AddTenantPropertyModal extends React.Component {
             body: JSON.stringify(tenantInfo)
         }
 
-        fetch("http://localhost:3001/api/v1/tenants", obj)
+        fetch("https://cader-api.herokuapp.com/api/v1/tenants", obj)
             .then(response => response.json())
             .then(data => console.log("Successfully Added to Tenants", data))
             .catch(error => console.log("Error", error))
@@ -70,7 +70,7 @@ class AddTenantPropertyModal extends React.Component {
             body: JSON.stringify(payload)
         }
 
-        fetch(`http://localhost:3001/api/v1/apartments/${apartment}`, obj)
+        fetch(`https://cader-api.herokuapp.com/api/v1/apartments/${apartment}`, obj)
             .then(response => response.json())
             .then(data => {
                 console.log("Successfully updated", data)

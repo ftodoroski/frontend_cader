@@ -19,7 +19,6 @@ class PropertyDetailModal extends React.Component {
             this.setState({
                 apartment_id: this.props.apartmentPressed.id
             })
-            // console.log("Inside the componentDidUpdate", "- checking for apartmentPressed",this.props.apartmentPressed)
         } 
     }
 
@@ -27,7 +26,6 @@ class PropertyDetailModal extends React.Component {
         this.setState({ [e.target.name]: e.target.value }, () => console.log(this.state))
     }
 
-    // Here - This one
     AddTenant = (tenantInfo) => {
         const obj = {
             method: "POST",
@@ -38,7 +36,7 @@ class PropertyDetailModal extends React.Component {
             body: JSON.stringify(tenantInfo)
         }
 
-        fetch("http://localhost:3001/api/v1/tenants", obj)
+        fetch("https://cader-api.herokuapp.com/api/v1/tenants", obj)
             .then(response => response.json())
             .then(data => {
                 console.log("Successfully Added to Tenants", data)
@@ -56,7 +54,6 @@ class PropertyDetailModal extends React.Component {
         return mm + '/' + dd + '/' + yyyy;
     }
 
-    // Here - This one
     chanageApartmentStatus = () => {
         const apartment = this.props.apartmentPressed.id
     
@@ -74,7 +71,7 @@ class PropertyDetailModal extends React.Component {
             body: JSON.stringify(payload)
         }
 
-        fetch(`http://localhost:3001/api/v1/apartments/${apartment}`, obj)
+        fetch(`https://cader-api.herokuapp.com/api/v1/apartments/${apartment}`, obj)
             .then(response => response.json())
             .then(data => {
                 console.log("Successfully updated", data)
@@ -82,7 +79,6 @@ class PropertyDetailModal extends React.Component {
             .catch(error => console.log("Error", error))
     }
     
-    // Here - This one
     handleSubmit = (e) => {
         e.preventDefault()
         const tenantInfo = {

@@ -1,12 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { handleChange, handleSignupLogin } from '../actions'
-// import { Router } from 'react-router-dom'
+
 
 class Signup extends React.Component {
-// Need to add some properties to the defaultState in store 
-// The phone_number needs to be converted to an Int
-// Check other data input field for the right data type from the schema 
 
     handleSubmit = (e)  => {
         e.preventDefault()
@@ -25,7 +22,7 @@ class Signup extends React.Component {
             })
         }
 
-        fetch('http://127.0.0.1:3001/api/v1/owners', obj).then(response => response.json()).then(response => {
+        fetch('https://cader-api.herokuapp.com/api/v1/owners', obj).then(response => response.json()).then(response => {
             localStorage.token = response.token
             this.props.handleSignupLogin(response)
             this.props.history.push('/properties')
@@ -64,6 +61,3 @@ const mapDispatchToState = {
 }
 
 export default connect(mapStateToProps, mapDispatchToState) (Signup)
-
-// Might need to chnage the this.props.history into history
-// beucase the the BrowserRouter was changed to just Router

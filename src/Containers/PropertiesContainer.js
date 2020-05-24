@@ -18,7 +18,7 @@ class PropertiesContainer extends React.Component {
         if (this.props.currentUser !== prevProps.currentUser) {
             const owner_id = this.props.currentUser.id
 
-            fetch(`http://localhost:3001/api/v1/owner_properties/${owner_id}`)
+            fetch(`https://cader-api.herokuapp.com/api/v1/owner_properties/${owner_id}`)
             .then(response => response.json())
             .then(response => {
                 this.props.getOwnerProperties(response)
@@ -33,7 +33,7 @@ class PropertiesContainer extends React.Component {
         if (this.props.currentUser) {
             const ownerId = this.props.currentUser.id
 
-            fetch(`http://localhost:3001/api/v1/owner_properties/${ownerId}`)
+            fetch(`https://cader-api.herokuapp.com/api/v1/owner_properties/${ownerId}`)
                 .then(response => response.json())
                 .then(data => {
                     this.props.getOwnerProperties(data)

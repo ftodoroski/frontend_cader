@@ -25,7 +25,7 @@ class Login extends React.Component {
             })
         }
 
-        fetch('http://127.0.0.1:3001/api/v1/login', obj).then(response => response.json()).then(response => {
+        fetch('https://cader-api.herokuapp.com/api/v1/login', obj).then(response => response.json()).then(response => {
             if (response["owner"]) {
                 localStorage.token = response.token
                 this.props.handleSignupLogin(response)

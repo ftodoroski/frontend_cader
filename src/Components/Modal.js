@@ -5,13 +5,6 @@ import { toogleModal, getUnoccupiedUnits } from "../actions"
 import AddTenantIcon from "./AddTenantIcon"
 import history from '../history'
 
-// const initialState = {
-//     name: "",
-//     password: "",
-//     email: "",
-//     phone_number: "",
-//     apartment_id: null
-// }
 
 class ModalExampleDimmer extends Component {
     state = {
@@ -44,7 +37,7 @@ class ModalExampleDimmer extends Component {
             body: JSON.stringify(tenantInfo)
         }
 
-        fetch("http://localhost:3001/api/v1/tenants", obj)
+        fetch("https://cader-api.herokuapp.com/api/v1/tenants", obj)
         .then(response => response.json())
         .then(data => console.log("Successfully Added to Tenants", data))
         .catch(error => console.log("Error", error))
@@ -75,7 +68,7 @@ class ModalExampleDimmer extends Component {
             body: JSON.stringify(payload)
         }
         
-        fetch(`http://localhost:3001/api/v1/apartments/${apartment}`, obj)
+        fetch(`https://cader-api.herokuapp.com/api/v1/apartments/${apartment}`, obj)
         .then(response => response.json())
         .then(data => {
             
@@ -114,7 +107,6 @@ class ModalExampleDimmer extends Component {
     }
 
     render() {
-        // console.log(history)
     
         return (
             <div>

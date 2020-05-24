@@ -14,21 +14,17 @@ class Map extends React.Component {
     componentDidMount() {
         if (history.location.pathname === "/properties") {
             const ownerId = this.props.currentUser.id
-            // console.log(history.location.pathname)
     
-            fetch(`http://localhost:3001/api/v1/properties_coordinates/${ownerId}`)
+            fetch(`https://cader-api.herokuapp.com/api/v1/properties_coordinates/${ownerId}`)
             .then(response => response.json())
             .then(data => this.setState({propertyCoordinates: data}))   
         } else {
-            // const propertyId = history.location.pathname[history.location.pathname.length - 1]
             const propertyId = history.location.pathname.split("/")[2]
-            // console.log(history.location.pathname.split("/")[2])
    
-            fetch(`http://localhost:3001/api/v1/property_coordinates/${propertyId}`)
+            fetch(`https://cader-api.herokuapp.com/api/v1/properties_coordinates/${propertyId}`)
             .then(response => response.json())
             .then(data => this.setState({ propertyCoordinates: data }))  
         }
-
     }
 
     propertiesMarker = () => {
@@ -48,17 +44,15 @@ class Map extends React.Component {
     }
 
     render() {
-        // console.log(this.props)
 
         return (
-            // <GoogleMap defaultZoom={12} defaultCenter={{ lat: 40.750704, lng: -73.939887}}>
             <GoogleMap defaultZoom={12} defaultCenter={{ lat: 40.750274, lng: -73.944535}}>
                 {this.state.propertyCoordinates.length == 2 ? 
                     <Marker
                         position={{ lat: this.state.propertyCoordinates[0], lng: this.state.propertyCoordinates[1] }}
                         onClick={() => this.setState({ selected: this.state.propertyCoordinates })}
                     />
-                    // {console.log(this.state.propertyCoordinates) }
+                    
                 :
                 this.state.propertyCoordinates.map(property => {
                     return (
@@ -68,9 +62,7 @@ class Map extends React.Component {
                         onClick={() => this.setState({selected: property})}
                     />)
                 })}
-                {/* {console.log(this.state.selected)} */}
                 
-
                 { this.state.selected && (
                     <InfoWindow 
                         position={{ 

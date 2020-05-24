@@ -1,9 +1,7 @@
 import React from 'react'
 import history from '../history'
-// import ModalExampleDimmer from "../Components/Modal"
 import { tooglePropertiesModal } from "../actions"
 import { connect } from "react-redux"
-// import AddTenantPropertiesModal from "../Components/AddTenantPropertiesModal"
 
 class PropertyCard extends React.Component {
 
@@ -19,12 +17,10 @@ class PropertyCard extends React.Component {
             body: JSON.stringify({revenue: revenue})
         }
 
-        fetch(`http://127.0.0.1:3001/api/v1/properties/${propertyId}`, obj)
+        fetch(`https://cader-api.herokuapp.com/api/v1/properties/${propertyId}`, obj)
         .then(response => response.json())
         .then(data => data)
         .catch(error => console.log(error))
-
-        // console.log("Its being mounted")
     }
 
     monthyIncome = () => {
@@ -35,8 +31,6 @@ class PropertyCard extends React.Component {
     }
 
     render() {
-        // console.log(this.props)
-
 
         return (
             <div className="property-card-container">

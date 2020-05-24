@@ -3,7 +3,6 @@ import Login from '../Components/Login'
 import { connect } from 'react-redux'
 import history from '../history'
 import { logOut } from '../actions'
-// import { bindActionCreators } from 'redux'
 import {withRouter} from 'react-router'
 import Logo from "../logoImage"
 import "../styles.css"
@@ -30,7 +29,6 @@ class Navbar extends React.Component {
     }
 
     render () { 
-        // console.log("Inside the Navbar", this.props)
 
         return (
             <div className="navbar-container">

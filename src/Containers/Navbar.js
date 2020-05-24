@@ -13,6 +13,7 @@ class Navbar extends React.Component {
         localStorage.removeItem("token")
         this.props.logOut()
         this.props.history.push('/')
+        
     }
 
     renderMenu = () => {

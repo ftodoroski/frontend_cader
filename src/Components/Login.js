@@ -38,6 +38,34 @@ class Login extends React.Component {
         })
     }
 
+    handleDemo = (e) => {
+        e.preventDefault()
+
+        const obj = {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                accept: 'application/json'
+            },
+            body: JSON.stringify({
+                email: "demoEmail@gmail.com",
+                password: "0000",
+            })
+        }
+
+        fetch('https://cader-api.herokuapp.com/api/v1/login', obj).then(response => response.json()).then(response => {
+            if (response["owner"]) {
+                localStorage.token = response.token
+                this.props.handleSignupLogin(response)
+                history.push('/properties')
+                this.setState({ loginUserError: false })
+            } else {
+                this.props.resetLoginInput()
+                this.setState({ loginUserError: true })
+            }
+        })
+    }
+
     
 
     render() {
@@ -68,7 +96,8 @@ class Login extends React.Component {
                         placeholder={this.state.loginUserError ? "Please try again" : null}
                     />
 
-                    <button type="submit" id="login-button">Log In</button>
+                    <button type="submit" className="login-button" id="left-login-button">Log In</button>
+                    <button className="login-button" id="right-login-button" onClick={this.handleDemo}>Demo</button>
                 </form>
             </div>
         )

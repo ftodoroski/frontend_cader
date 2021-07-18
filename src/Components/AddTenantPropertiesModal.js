@@ -1,9 +1,8 @@
 import React from 'react'
-import { Button, Modal, Form, Select } from 'semantic-ui-react'
+import { Button, Modal, Form} from 'semantic-ui-react'
 import { connect } from "react-redux"
 import { tooglePropertiesModal } from "../actions"
 import AddTenantIcon from "./AddTenantIcon"
-import history from '../history'
 
 class AddTenantPropertyModal extends React.Component {
     state = {

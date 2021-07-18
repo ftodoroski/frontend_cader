@@ -3,7 +3,6 @@ import { Button, Modal, Form } from 'semantic-ui-react'
 import { connect } from "react-redux"
 import { toogleModal, getUnoccupiedUnits } from "../actions"
 import AddTenantIcon from "./AddTenantIcon"
-import history from '../history'
 
 
 class ModalExampleDimmer extends Component {

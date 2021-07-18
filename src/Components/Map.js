@@ -47,7 +47,7 @@ class Map extends React.Component {
 
         return (
             <GoogleMap defaultZoom={12} defaultCenter={{ lat: 40.750274, lng: -73.944535}}>
-                {this.state.propertyCoordinates.length == 2 ? 
+                {this.state.propertyCoordinates.length === 2 ? 
                     <Marker
                         position={{ lat: this.state.propertyCoordinates[0], lng: this.state.propertyCoordinates[1] }}
                         onClick={() => this.setState({ selected: this.state.propertyCoordinates })}

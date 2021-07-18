@@ -3,7 +3,6 @@ import { Button, Modal, Form} from 'semantic-ui-react'
 import { connect } from "react-redux"
 import { tooglePropertyModal } from "../actions"
 import AddTenantIcon from "./AddTenantIcon"
-import history from '../history'
 
 class PropertyDetailModal extends React.Component {
     state = {

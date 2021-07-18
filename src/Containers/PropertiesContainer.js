@@ -4,7 +4,6 @@ import { getOwnerProperties, getOriginalOwnerProperties } from "../actions"
 import PropertyCard from "../Components/PropertyCard"
 import Map from "../Components/Map"
 import { withScriptjs, withGoogleMap } from "react-google-maps"
-import { Link } from "react-router-dom"
 import AddTenantPropertiesModal from "../Components/AddTenantPropertiesModal"
 
 
@@ -24,7 +23,7 @@ class PropertiesContainer extends React.Component {
                 this.props.getOwnerProperties(response)
                 this.props.getOriginalOwnerProperties(response)
             })
-        } else if (prevProps.properties != this.props.properties) {
+        } else if (prevProps.properties !== this.props.properties) {
 
         }
     }

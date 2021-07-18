@@ -24,7 +24,7 @@ class PropertyDetail extends React.Component {
                 property: response.property,
                 images: response.images,
                 apartments: response.apartments
-            }, () => console.log(this.state)))
+            }))
     }
 
     componentDidUpdate(prevProps, prevState) {
